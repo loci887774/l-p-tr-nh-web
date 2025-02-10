@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    z-index: 1000;
+    background-color: rgba(63, 63, 63);  
+}
+
+.nav a {
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    width: 25%;             
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgb(164, 164, 164);
+}
+
+.nav a.active {
+    background-color: rgb(6, 156, 6) 
+}
+
+.container-index .khung-anh{
+    background: rgb(104, 103, 103);
+}
+.container-index img {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    width: 100%;
+    margin-bottom: 8px;
+} 
+
+
+
+/* FORM ĐĂNG KÝ */
+.container-dang-ky table{
+    width: 100%;
+    border: 2px rgb(176, 174, 174) solid;
+    padding: 10px 0px 10px 10px;
+}
+
+.container-dang-ky .tieu-de h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type=text], input[type=password],  
+input[type=email], input[type=date]{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220, 223, 223);
+    padding: 5px;
+}
+
+input[type=radio] {
+    font-weight: bold;
+}
+
+.container-dang-ky .hai-cai-nut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 10px;
+}
+
+.container-dang-ky .hai-cai-nut button{
+    width: 30%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    color: white;
+
+}
+
+.container-dang-ky .hai-cai-nut .nut-reset {
+    background-color: rgb(216, 66, 66);
+}
+
+.container-dang-ky .hai-cai-nut .nut-submit {
+    background-color: rgb(53, 200, 158);
+}
+
+.container-dang-ky label {
+    /* display: block; */
+    width: 100%;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.container-dang-ky span {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+}
+
+.container-dang-ky table .td-label {
+    width: 20%;
+}
+
+
+/* FORM ĐĂNG NHẬP */
+.container-dang-nhap .row {
+    margin-bottom: 20px;
+}
+
+.container-dang-nhap h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-dang-nhap hr {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(162, 159, 155);
+}
+
+.container-dang-nhap .anh-dai-dien {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-dang-nhap img{
+    width: 40%;
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+.container-dang-nhap label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;  
+}
+
+.container-dang-nhap input {
+    background-color: aliceblue;
+}
+
+.container-dang-nhap .nut-dang-nhap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-dang-nhap .nut-dang-nhap .nut-submit {
+    width: 100%;
+    height: 40px;
+    background: rgb(105, 161, 106);
+    color: aliceblue;
+    border: none;
+}
+
+.container-dang-nhap .cancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .container-dang-nhap .cancel button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+/* .container-dang-nhap .cancel span {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+} */
+
+.container-dang-nhap .nut-cancel {
+    width: 70px;
+    background-color: rgb(222, 56, 56);
+    border: none;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+
