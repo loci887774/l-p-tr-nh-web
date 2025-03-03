@@ -1,0 +1,1 @@
+Kết nối thành công. Thông tin máy chủ: localhost via TCP/IP

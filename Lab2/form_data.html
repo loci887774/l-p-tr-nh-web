@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form nhập dữ liệu sách</title>
+</head>
+<body>
+    <!-- dữ liệu sẽ được đưa đến create_book -->
+    <form action="create_book.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <label for="title">Title:</label>
+            <br>
+            <input type="text" name='title' size="20">
+            <br>
+            <label for="introduction">Introduction:</label>
+            <br>
+            <textarea name='introduction' cols="40" rows="20"></textarea>
+            <br>
+            <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+            <label for="image_file">Book's image:</label>
+            <input type="file" name="image_file">
+        </fieldset>
+        <br>
+        <fieldset>
+            <input type="submit" name="submit" id="submit" value="Add to BookStore">
+            <input type="reset" name="submit" id="submit" value="Cancel">
+        </fieldset>
+    </form>
+</body>
+</html>
