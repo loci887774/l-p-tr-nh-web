@@ -1,0 +1,92 @@
+<style>
+    table {
+        margin: auto;
+        margin-top: 50px;
+    }
+    table label {
+        font-weight: bold;
+    }
+
+    h1 {
+        text-align: center;
+        color: deeppink;
+    }
+</style>
+<div class="login">
+    <%- include('partials/navbar')%>
+    <form action="/account/update" method="post" name="frm-update">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h1>UPDATE</h1>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                    <label for="hoten">Họ tên</label>
+                </td>
+                <td>
+                    <input type="text" class="hoten" id="hoten" name="hoten" required >
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td>
+                    <label for="password">Nhập mật khẩu cũ(nếu cần thay đổi) </label>
+                </td>
+                <td>
+                    <input type="password" class="password" id="password" name="password"  >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="password">Nhập mật khẩu mới</label>
+                </td>
+                <td>
+                    <input type="password" class="password" id="password" name="password"  >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="password">Xác nhận mật khẩu mới</label>
+                </td>
+                <td>
+                    <input type="password" class="password" id="password" name="password"  >
+                </td>
+            </tr> -->
+
+            <tr>
+                <td>
+                    <label for="namsinh">Năm sinh</label>
+                </td>
+                <td>
+                    <select name="namsinh" required >
+                        <% 
+                            for (let namsinh = 1900; namsinh <= new Date().getFullYear(); namsinh++) { 
+                        %>
+                            <option value="<%= namsinh %>"><%= namsinh %></option>
+                        <% } %>                      
+                    </select>
+                </td>        
+            </tr>  
+            <tr>
+                <td>
+                    <label for="gioitinh">Giới tính</label>
+                </td>
+                <td>
+                        <input type="radio" id="nam" class="gioitinh" name="gioitinh" value="1">Nam
+                        <input type="radio" id="nu" class="gioitinh" name="gioitinh" value="0">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="nut-trong-form-dang-ky">
+                    <input type="submit"  name="submit" id="submit" value="Thay đổi">
+                    <input type="reset"  name="reset" id="reset" value="Xóa Form">
+                </td>
+            </tr>              
+        </table>       
+    </form>    
+</div>
+   

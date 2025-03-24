@@ -1,0 +1,50 @@
+<%- include('partials/navbar')%>
+
+<style>
+    table {
+    margin: auto;
+    margin-top: 50px;
+    }
+
+    table label {
+        font-weight: bold;
+    }
+
+    h1 {
+        text-align: center;
+        color: deeppink;
+    }
+
+    #submit {
+        margin: auto;
+    }
+</style>
+
+<h2>Đăng nhậ</h2>
+<form method="POST" action="/login">
+    <table>
+        <tr>
+            <h1>LOGIN</h1>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Địa chỉ Email</label>
+            </td>
+            <td>
+                <input type="email" class="email" id="email" name="email" required >
+            </td>
+        </tr>
+           
+        <tr>
+            <td>
+                <label for="password">Mật khẩu</label>
+            </td>
+            <td>
+                <input type="password" class="password" id="password" name="password" required >
+            </td>
+        </tr>
+        <td colspan="2" class="nut-trong-form-dang-nhap">
+            <input type="submit"  name="submit" id="submit" value="Login">
+        </td>
+    </table>
+</form>

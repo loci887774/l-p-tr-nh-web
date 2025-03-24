@@ -1,0 +1,64 @@
+<%- include('partials/navbar')%>
+
+<style>
+    table {
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    table label {
+        font-weight: bold;
+    } 
+
+    h2 {
+        margin-top: 100px;
+        font-size: 32px;
+        text-align: center;
+        color: rgb(56, 91, 92);
+        background-color: rgb(204, 116, 184);
+        
+    }
+</style>
+<h2>Profile</h2>
+<form action="/account/update" method="get">
+    <table>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                <%= email %>
+            </td>
+        </tr>
+           
+        <tr>
+            <td>
+                <label for="hoten">Họ tên</label>
+            </td>
+            <td>
+                <%= hoten %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="namsinh">Năm sinh</label>
+            </td>
+            <td>
+                <%= namsinh %>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="gioitinh">Giới tính</label>
+            </td>
+            <td>
+                <%= gioitinh %>
+            </td>
+        </tr>
+        <td colspan="2" class="nut-trong-form-dang-nhap">
+            <input type="submit"  name="submit" id="submit" value="Update">
+        </td>
+    </table>
+</form>

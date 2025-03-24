@@ -1,0 +1,100 @@
+<style>
+    table {
+        margin: auto;
+        margin-top: 50px;
+    }
+    table label {
+        font-weight: bold;
+    }
+
+    h1 {
+        color: deeppink;
+    }
+</style>
+<div class="login">
+    <%- include('partials/navbar')%>
+    <form action="/register" method="post" name="frm-dang-ky">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h1>THÔNG TIN ĐĂNG KÝ THÀNH VIÊN</h1>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                    <label for="hoten">Họ tên</label>
+                </td>
+                <td>
+                    <input type="text" class="hoten" id="hoten" name="hoten" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Địa chỉ Email</label>
+                </td>
+                <td>
+                    <input type="email" class="email" id="email" name="email" required >
+                </td>
+            </tr>
+               
+            <tr>
+                <td>
+                    <label for="password">Mật khẩu</label>
+                </td>
+                <td>
+                    <input type="password" class="password" id="password" name="password" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="namsinh">Năm sinh</label>
+                </td>
+                <td>
+                    <select name="namsinh" required >
+                        <% 
+                            for (let namsinh = 1900; namsinh <= new Date().getFullYear(); namsinh++) { 
+                        %>
+                            <option value="<%= namsinh %>"><%= namsinh %></option>
+                        <% } %>                      
+                    </select>
+                </td>        
+            </tr>  
+            <tr>
+                <td>
+                    <label for="gioitinh">Giới tính</label>
+                </td>
+                <td>
+                        <input type="radio" id="nam" class="gioitinh" name="gioitinh" value="1">Nam
+                        <input type="radio" id="nu" class="gioitinh" name="gioitinh" value="0">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="nut-trong-form-dang-ky">
+                    <input type="submit"  name="submit" id="submit" value="Đăng Ký">
+                    <input type="reset"  name="reset" id="reset" value="Xóa Form">
+                </td>
+            </tr>              
+        </table>       
+    </form>    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#email').on('blur', function () {
+        const email = $(this).val();
+        if (email) {
+            $.ajax({
+                url: '/check-email',
+                method: 'POST',
+                data: { email: email },
+                success: function (response) {
+                    if (response.exists) {
+                        alert('Email đã tồn tại');
+                        $('#email').val('');
+                        $('#email').focus();
+                    }
+                }
+            });
+        }
+    });
+</script>
